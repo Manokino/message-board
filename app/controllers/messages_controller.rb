@@ -9,7 +9,7 @@ class MessagesController < ApplicationController
 	end
 
 	def new
-		@messages = Message.new
+		@message = Message.new
 	end
 
 	def create
@@ -37,7 +37,7 @@ class MessagesController < ApplicationController
     end
 	end
 
-	def destory
+	def destroy
     @message.destroy
 
     flash[:success] = 'Message は正常に削除されました'
